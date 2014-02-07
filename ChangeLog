@@ -1,3 +1,258 @@
+commit 025ced249341c79ed8fd40e64392fbf6afab1baf
+Author: Christian Persch <chpe@gnome.org>
+Date:   Mon Mar 26 14:41:41 2012 +0200
+
+    Version 3.4.0.1
+
+ configure.in |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit c65c648e91976a125393cbe294ce755b0f63fa7d
+Author: Christian Persch <chpe@gnome.org>
+Date:   Mon Mar 26 14:38:52 2012 +0200
+
+    Post release version bump
+
+ configure.in |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit c593ea7b59b903e1aaaff6c7ecb218e39288dc23
+Author: Christian Persch <chpe@gnome.org>
+Date:   Mon Mar 26 14:37:45 2012 +0200
+
+    Version 3.4.0
+
+ configure.in |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit a6490c594f4a70ce5a397c30aa30ba2ec19a38a8
+Author: Javier Jardón <jjardon@gnome.org>
+Date:   Mon Mar 12 13:16:41 2012 +0000
+
+    VTE has been converted to deprecation attributes
+
+ macros2/gnome-common.m4 |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit b7d063cd90e1d366641cc7e43daf2fadfeb825d5
+Author: Javier Jardón <jjardon@gnome.org>
+Date:   Mon Mar 12 12:58:16 2012 +0000
+
+    ATK has been converted to deprecation attributes
+
+ macros2/gnome-common.m4 |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 75b1f001b9f3d5c55e50cd011e75f64bf44569c3
+Author: Matthias Clasen <mclasen@redhat.com>
+Date:   Thu Oct 13 17:58:12 2011 -0400
+
+    Pango has been converted to deprecation attributes
+
+ macros2/gnome-common.m4 |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 75232b9ec261125568633f417df1d89256974c4b
+Author: Matthias Clasen <mclasen@redhat.com>
+Date:   Wed Oct 12 12:32:49 2011 -0400
+
+    Don't break the build with deprecations
+    
+    At least for glib/gdk/gtk, we now have deprecation compiler warnings
+    set up, so there is no need to forcibly break everybody's build
+    just to get them to notice deprecations.
+    
+    https://bugzilla.gnome.org/show_bug.cgi?id=661273
+
+ macros2/gnome-common.m4 |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 7f977b0214623142819c8b7a08839949fb9f3ec0
+Author: Colin Walters <walters@verbum.org>
+Date:   Wed Jun 22 15:53:42 2011 -0400
+
+    gnome-autogen.sh: Don't print terminal codes if stdin isn't a tty
+    
+    Otherwise this shows up as garbage in log files.
+
+ macros2/gnome-autogen.sh |    9 +++++++--
+ 1 files changed, 7 insertions(+), 2 deletions(-)
+
+commit ee256d60790a464ca56b452c0a70ad0c03547519
+Author: Shaun McCance <shaunm@gnome.org>
+Date:   Thu May 12 11:00:09 2011 -0400
+
+    gnome-autogen.sh: Check for yelp.m4 with YELP_HELP_INIT
+
+ macros2/gnome-autogen.sh |    4 ++++
+ 1 files changed, 4 insertions(+), 0 deletions(-)
+
+commit 62baea2b4b519f4e9d62848e4d7b39761fbdd2f2
+Author: Christian Persch <chpe@gnome.org>
+Date:   Thu May 12 17:47:02 2011 +0200
+
+    Post branch version bump
+
+ configure.in |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit a4af250ce8186daaaccf3883a91d6f0bc4722e95
+Author: Christian Persch <chpe@gnome.org>
+Date:   Sun Apr 3 19:44:18 2011 +0200
+
+    Version 2.34.0
+
+ configure.in |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 0163dc8d49b6eace36b14b88ca7d3378f22a6fb6
+Author: Christian Persch <chpe@gnome.org>
+Date:   Sun Apr 3 19:43:50 2011 +0200
+
+    Fix distcheck
+
+ Makefile.am |    2 --
+ 1 files changed, 0 insertions(+), 2 deletions(-)
+
+commit f96a12fc3ead855c129d7ab35737a8b0deceeae5
+Author: Christian Persch <chpe@gnome.org>
+Date:   Sun May 30 22:41:02 2010 +0200
+
+    Define GNOME_COMMON_INIT with AU_DEFUN
+    
+    ... to mark it as deprecated.
+    
+    Bug #608285.
+
+ macros2/gnome-common.m4 |    9 ++++++---
+ 1 files changed, 6 insertions(+), 3 deletions(-)
+
+commit 04dd5e38d9ef5f0df89b7def24747f177f258c3a
+Author: Christian Persch <chpe@gnome.org>
+Date:   Sun May 30 22:31:50 2010 +0200
+
+    Add serial to gnome-common.m4
+
+ macros2/gnome-common.m4 |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+commit ca7576b6672c37259dd19ec3ef582ce409d24948
+Author: Christian Persch <chpe@gnome.org>
+Date:   Sun May 30 21:44:00 2010 +0200
+
+    Remove gnome1 cruft
+
+ configure.in                  |    1 -
+ gnome-common.spec.in          |   39 --
+ intl/ChangeLog                |    4 -
+ intl/Makefile.in              |  313 ----------
+ intl/README.cvs-commits       |   13 -
+ intl/VERSION                  |    1 -
+ intl/bindtextdom.c            |  369 ------------
+ intl/cat-compat.c             |  262 --------
+ intl/config.charset           |  438 --------------
+ intl/dcgettext.c              |   58 --
+ intl/dcigettext.c             | 1259 --------------------------------------
+ intl/dcngettext.c             |   60 --
+ intl/dgettext.c               |   59 --
+ intl/dngettext.c              |   61 --
+ intl/explodename.c            |  192 ------
+ intl/finddomain.c             |  198 ------
+ intl/gettext.c                |   64 --
+ intl/gettext.h                |  102 ----
+ intl/gettextP.h               |  252 --------
+ intl/hash-string.h            |   59 --
+ intl/intl-compat.c            |  166 -----
+ intl/intlh.inst.in            |  111 ----
+ intl/l10nflist.c              |  405 -------------
+ intl/libgettext.h             |   49 --
+ intl/libgnuintl.h             |  128 ----
+ intl/libintl.glibc            |  111 ----
+ intl/linux-msg.sed            |  100 ---
+ intl/loadinfo.h               |  109 ----
+ intl/loadmsgcat.c             |  567 ------------------
+ intl/localcharset.c           |  271 ---------
+ intl/locale.alias             |   78 ---
+ intl/localealias.c            |  404 -------------
+ intl/ngettext.c               |   68 ---
+ intl/plural.c                 | 1326 -----------------------------------------
+ intl/plural.y                 |  413 -------------
+ intl/po2tbl.sed.in            |  102 ----
+ intl/ref-add.sin              |   31 -
+ intl/ref-del.sin              |   26 -
+ intl/textdomain.c             |  142 -----
+ intl/xopen-msg.sed            |  104 ----
+ macros/ChangeLog              | 1261 ---------------------------------------
+ macros/Makefile.am            |   43 --
+ macros/README.cvs-commits     |   13 -
+ macros/aclocal-include.m4     |   16 -
+ macros/autogen.sh             |  210 -------
+ macros/compiler-flags.m4      |  109 ----
+ macros/curses.m4              |  318 ----------
+ macros/gnome-bonobo-check.m4  |  166 -----
+ macros/gnome-common.m4        |   14 -
+ macros/gnome-cxx-check.m4     |   10 -
+ macros/gnome-fileutils.m4     |  414 -------------
+ macros/gnome-gettext.m4       |  338 -----------
+ macros/gnome-ghttp-check.m4   |   14 -
+ macros/gnome-gnorba-check.m4  |   35 --
+ macros/gnome-guile-checks.m4  |  134 -----
+ macros/gnome-libgtop-check.m4 |  217 -------
+ macros/gnome-objc-checks.m4   |   83 ---
+ macros/gnome-orbit-check.m4   |   33 -
+ macros/gnome-pilot.m4         |  213 -------
+ macros/gnome-print-check.m4   |   63 --
+ macros/gnome-pthread-check.m4 |   18 -
+ macros/gnome-support.m4       |   68 ---
+ macros/gnome-undelfs.m4       |   22 -
+ macros/gnome-vfs.m4           |  126 ----
+ macros/gnome-x-checks.m4      |   80 ---
+ macros/gnome-xml-check.m4     |   32 -
+ macros/gnome.m4               |  130 ----
+ macros/gperf-check.m4         |   79 ---
+ macros/linger.m4              |   28 -
+ macros/need-declaration.m4    |   42 --
+ macros/psiconv.m4             |   53 --
+ 71 files changed, 0 insertions(+), 12897 deletions(-)
+
+commit 972f22b47c0852e207738d66fa2e16e5c37a3b66
+Author: Christian Persch <chpe@gnome.org>
+Date:   Sun May 30 21:42:54 2010 +0200
+
+    Bump version
+
+ configure.in |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 230af79ef72f1465b83b36df05db08f029805e65
+Author: Mathias Hasselmann <mathias@openismus.com>
+Date:   Fri Mar 19 08:55:57 2010 +0100
+
+    Use dirname, instead of basename for finding srcdir
+    
+    Partially fixes bug #510989.
+
+ doc/usage.txt |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 6ff498d5264fdd1541c2b823334a7542bf01701f
+Author: Pablo Castellano <pablog@src.gnome.org>
+Date:   Mon Jan 4 02:41:09 2010 +0100
+
+    Updated .gitignore file
+
+ .gitignore |   11 +++++++++++
+ 1 files changed, 11 insertions(+), 0 deletions(-)
+
+commit 36dfb7fa5e7147ad4503053281a9d7c6142f53fe
+Author: Christian Persch <chpe@gnome.org>
+Date:   Mon Sep 21 13:43:27 2009 +0200
+
+    Post branch version update
+
+ configure.in |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
 commit b3710d54df87cc7e56fdf093cbe753d022422f73
 Author: Christian Persch <chpe@gnome.org>
 Date:   Sun Sep 6 16:11:06 2009 +0200
@@ -83,11 +338,11 @@ Date:   Mon May 11 15:12:27 2009 +0200
 
     Autogenerate ChangeLog
 
- ChangeLog         |14901 ++++++++++++++++++++++++++++++++++++++++++++++++++---
- ChangeLog.pre-git |  860 +++
- Makefile.am       |   17 +-
- configure.in      |    2 +-
- 4 files changed, 14948 insertions(+), 832 deletions(-)
+ ChangeLog                      |14901 +++++++++++++++++++++++++++++++++++++---
+ ChangeLog => ChangeLog.pre-git |    0
+ Makefile.am                    |   17 +-
+ configure.in                   |    2 +-
+ 4 files changed, 14088 insertions(+), 832 deletions(-)
 
 commit cd4ebced07dcb2ff7f12e53afdcb092339ac0d89
 Author: Vincent Legoll <vincent.legoll@gmail.com>
@@ -1573,19 +1828,17 @@ Date:   Wed May 26 06:42:10 2004 +0000
     
     svn path=/trunk/; revision=3443
 
- ChangeLog                          |   28 +++
- Makefile.am                        |    4 +-
- autogen.sh                         |    6 +-
- configure.in                       |   33 +---
- macros2/Makefile.am                |   21 +--
- macros2/autogen.sh                 |  411 ------------------------------------
- macros2/compiler-flags.m4          |  141 ------------
- macros2/curses.m4                  |  318 ----------------------------
- macros2/gnome-autogen.sh           |  411 ++++++++++++++++++++++++++++++++++++
- macros2/gnome-common.m4            |   25 +--
- macros2/gnome-compiler-flags.m4    |  141 ++++++++++++
- macros2/gnome-deprecated-macros.m4 |   32 ---
- 12 files changed, 609 insertions(+), 962 deletions(-)
+ ChangeLog                                          |   28 ++
+ Makefile.am                                        |    4 +-
+ autogen.sh                                         |    6 +-
+ configure.in                                       |   33 +--
+ macros2/Makefile.am                                |   21 +-
+ macros2/curses.m4                                  |  318 --------------------
+ macros2/{autogen.sh => gnome-autogen.sh}           |    0
+ macros2/gnome-common.m4                            |   25 +-
+ .../{compiler-flags.m4 => gnome-compiler-flags.m4} |   26 +-
+ macros2/gnome-deprecated-macros.m4                 |   32 --
+ 10 files changed, 70 insertions(+), 423 deletions(-)
 
 commit 9d8824a338204c20411b159a3c0c0a0711b8af96
 Author: James Henstridge <james@daa.com.au>
@@ -5689,22 +5942,22 @@ Date:   Mon Jul 24 14:27:58 2000 +0000
     
     svn path=/trunk/; revision=1310
 
- macros2/ChangeLog              |    4 +
- macros2/Makefile.am            |   17 +-
- macros2/aclocal-include.m4     |   16 ++
- macros2/compiler-flags.m4      |  109 ++++++++
- macros2/gnome-common.m4        |    2 +-
- macros2/gnome-cxx-check.m4     |   10 +
- macros2/gnome-fileutils.m4     |  414 ++++++++++++++++++++++++++++
- macros2/gnome-gettext.m4       |  336 +++++++++++++++++++++++
- macros2/gnome-gnorba-check.m4  |   35 +++
- macros2/gnome-pthread-check.m4 |   16 ++
- macros2/gnome-support.m4       |   68 +++++
- macros2/gnome-x-checks.m4      |   80 ++++++
- macros2/gnome.m4               |  579 ++++++++--------------------------------
- macros2/linger.m4              |   28 ++
- macros2/need-declaration.m4    |   42 +++
- 15 files changed, 1283 insertions(+), 473 deletions(-)
+ macros2/ChangeLog                      |    4 +
+ macros2/Makefile.am                    |   17 +-
+ macros2/aclocal-include.m4             |   16 +
+ macros2/compiler-flags.m4              |  109 ++++++
+ macros2/gnome-common.m4                |    2 +-
+ macros2/gnome-cxx-check.m4             |   10 +
+ macros2/gnome-fileutils.m4             |  414 +++++++++++++++++++++++
+ macros2/{gnome.m4 => gnome-gettext.m4} |  145 +--------
+ macros2/gnome-gnorba-check.m4          |   35 ++
+ macros2/gnome-pthread-check.m4         |   16 +
+ macros2/gnome-support.m4               |   68 ++++
+ macros2/gnome-x-checks.m4              |   80 +++++
+ macros2/gnome.m4                       |  579 +++++++-------------------------
+ macros2/linger.m4                      |   28 ++
+ macros2/need-declaration.m4            |   42 +++
+ 15 files changed, 950 insertions(+), 615 deletions(-)
 
 commit c978e43ae83a5a7e7fc8fe32538afbffc5812da9
 Author: Elliot Lee <sopwith@src.gnome.org>
@@ -5888,15 +6141,14 @@ Date:   Mon May 29 15:42:50 2000 +0000
     
     svn path=/trunk/; revision=1256
 
- Makefile.am             |    2 +-
- bin/ChangeLog           |    5 +++++
- bin/Makefile.am         |    2 ++
- bin/gnome-autogen.sh    |   11 +++++++++++
- configure.in            |    4 +++-
- macros/ChangeLog        |    4 ++++
- macros/Makefile.am      |    4 +---
- macros/gnome-autogen.sh |   11 -----------
- 8 files changed, 27 insertions(+), 16 deletions(-)
+ Makefile.am                      |    2 +-
+ bin/ChangeLog                    |    5 +++++
+ bin/Makefile.am                  |    2 ++
+ {macros => bin}/gnome-autogen.sh |    0
+ configure.in                     |    4 +++-
+ macros/ChangeLog                 |    4 ++++
+ macros/Makefile.am               |    4 +---
+ 7 files changed, 16 insertions(+), 5 deletions(-)
 
 commit 36f51b0a71f4f10c74c37d30bcdd59b01f06292b
 Author: Martin Baulig <martin@src.gnome.org>
