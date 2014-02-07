@@ -3,9 +3,10 @@ Bug: http://bugzilla.gnome.org/show_bug.cgi?id=588020
 Bug-Debian: http://bugs.debian.org/378736
 Origin: vendor
 
-diff -urp ../old/gnome-common-2.20.0/macros2/gnome-autogen.sh gnome-common-2.20.0/macros2/gnome-autogen.sh
---- ../old/gnome-common-2.20.0/macros2/gnome-autogen.sh	2008-05-14 18:08:37.000000000 +0200
-+++ gnome-common-2.20.0/macros2/gnome-autogen.sh	2008-05-14 18:08:23.000000000 +0200
+Index: gnome-common-3.4.0.1/macros2/gnome-autogen.sh
+===================================================================
+--- gnome-common-3.4.0.1.orig/macros2/gnome-autogen.sh	2012-04-23 14:14:06.301687868 +0200
++++ gnome-common-3.4.0.1/macros2/gnome-autogen.sh	2012-04-23 14:14:08.149687799 +0200
 @@ -2,24 +2,24 @@
  # Run this to generate all the initial makefiles, etc.
  
@@ -45,7 +46,7 @@ diff -urp ../old/gnome-common-2.20.0/macros2/gnome-autogen.sh gnome-common-2.20.
  
  # Not all echo versions allow -n, so we check what is possible. This test is
  # based on the one in autoconf.
-@@ -168,7 +168,8 @@ check_m4macros() {
+@@ -174,7 +174,8 @@
      # but it contains only Automake's own macros, so we can ignore it.
  
      # Read the dirlist file, supported by Automake >= 1.7.

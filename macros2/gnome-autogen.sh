@@ -36,8 +36,13 @@ case `echo -n x` in
 esac
 
 # some terminal codes ...
-boldface="`tput bold 2>/dev/null`"
-normal="`tput sgr0 2>/dev/null`"
+if tty < /dev/null 1>/dev/null 2>&1; then
+    boldface="`tput bold 2>/dev/null`"
+    normal="`tput sgr0 2>/dev/null`"
+else
+    boldface=
+    normal=
+fi
 printbold() {
     echo $ECHO_N "$boldface" $ECHO_C
     echo "$@"
@@ -293,6 +298,10 @@ for configure_ac in $configure_files; do
     # check that AM_MAINTAINER_MODE is used
     if grep "^AM_MAINTAINER_MODE" $configure_ac >/dev/null; then
 	want_maintainer_mode=true
+    fi
+
+    if grep "^YELP_HELP_INIT" $configure_ac >/dev/null; then
+        require_m4macro yelp.m4
     fi
 
     # check to make sure gnome-common macros can be found ...

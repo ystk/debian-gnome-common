@@ -1,3 +1,42 @@
+gnome-common (3.4.0.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Refresh debian/patches/03_bashisms.patch.
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 10 May 2012 14:54:34 +0200
+
+gnome-common (3.1.0-1) unstable; urgency=low
+
+  [ Martin Pitt ]
+  * debian/watch: Switch to *.xz
+
+  [ Michael Biebl ]
+  * New upstream release.
+  * debian/watch: Track unstable releases.
+  * debian/control.in: Add Vcs-* fields.
+  * Update debian/copyright using the machine-readable copyright format 1.0.
+  * Bump debhelper compatibility level to 9.
+  * Bump Standards-Version to 3.9.3.
+  * Bump mimimum required version of automake to 1.11.
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 15 Mar 2012 20:11:22 +0100
+
+gnome-common (2.34.0-1) unstable; urgency=low
+
+  * Add dependency on autopoint.
+  * New upstream release.
+  * Switch to 3.0 (quilt) source format.
+
+ -- Josselin Mouette <joss@debian.org>  Fri, 22 Apr 2011 00:11:55 +0200
+
+gnome-common (2.28.0-2) unstable; urgency=low
+
+  * Set Maintainer to the GNOME team.
+  * Bump Standards-Version to 3.9.1, with no changes needed.
+  * Switch to Debhelper v7.
+
+ -- Jordi Mallach <jordi@debian.org>  Sun, 17 Oct 2010 13:57:02 +0200
+
 gnome-common (2.28.0-1) unstable; urgency=low
 
   * New upstream release.
