@@ -1,0 +1,23 @@
+From 13d01a8be18642956042f00321dece2cfe5493f1 Mon Sep 17 00:00:00 2001
+From: Martin Pitt <martinpitt@gnome.org>
+Date: Thu, 10 Jul 2014 14:09:23 +0200
+Subject: code-coverage: Support lcov 1.11
+
+https://bugzilla.gnome.org/show_bug.cgi?id=732988
+
+diff --git a/macros2/gnome-code-coverage.m4 b/macros2/gnome-code-coverage.m4
+index 62375e6..39da356 100644
+--- a/macros2/gnome-code-coverage.m4
++++ b/macros2/gnome-code-coverage.m4
+@@ -44,7 +44,7 @@ AC_DEFUN([GNOME_CODE_COVERAGE],[
+ 		])
+ 
+ 		# List of supported lcov versions.
+-		lcov_version_list="1.6 1.7 1.8 1.9 1.10"
++		lcov_version_list="1.6 1.7 1.8 1.9 1.10 1.11"
+ 
+ 		AC_CHECK_PROG([LCOV], [lcov], [lcov])
+ 		AC_CHECK_PROG([GENHTML], [genhtml], [genhtml])
+-- 
+cgit v0.10.1
+

@@ -7,16 +7,26 @@ Source: gnome-common
 Section: gnome
 Priority: optional
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Uploaders: Emilio Pozuelo Monfort <pochu@debian.org>, Jordi Mallach <jordi@debian.org>, Josselin Mouette <joss@debian.org>, Loic Minier <lool@dooz.org>, Michael Biebl <biebl@debian.org>, Sebastian Dröge <slomo@debian.org>
-Build-Depends: debhelper (>= 9), cdbs, gnome-pkg-tools
-Build-Depends-Indep: pkg-config, autotools-dev
-Standards-Version: 3.9.3
-Vcs-Svn: svn://anonscm.debian.org/svn/pkg-gnome/desktop/unstable/gnome-common
+Uploaders: Andreas Henriksson <andreas@fatal.se>, Gustavo Noronha Silva <kov@debian.org>, Jordi Mallach <jordi@debian.org>, Josselin Mouette <joss@debian.org>, Martin Pitt <mpitt@debian.org>, Michael Biebl <biebl@debian.org>
+Build-Depends: debhelper (>= 9),
+               cdbs,
+               gnome-pkg-tools
+Build-Depends-Indep: pkg-config,
+                     autotools-dev
+Standards-Version: 3.9.5
+Vcs-Svn: svn://anonscm.debian.org/pkg-gnome/desktop/unstable/gnome-common
 Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-gnome/desktop/unstable/gnome-common
 
 Package: gnome-common
 Architecture: all
-Depends: ${misc:Depends}, autoconf, automake (>= 1:1.11), libtool, pkg-config, gettext, intltool, autopoint
+Depends: ${misc:Depends},
+         autoconf,
+         automake (>= 1:1.11),
+         libtool,
+         pkg-config,
+         gettext,
+         intltool,
+         autopoint
 Description: common scripts and macros to develop with GNOME
  gnome-common is an extension to autoconf, automake and libtool for the GNOME
  environment and GNOME using applications. Included are gnome-autogen.sh and

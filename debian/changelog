@@ -1,3 +1,52 @@
+gnome-common (3.12.0-2) unstable; urgency=medium
+
+  * Add 00upstream_lcov-1.11.patch: code-coverage: Support lcov 1.11.
+    Cherry-picked from upstream git.
+  * Bump Standards-Version to 3.9.5, no changes necessary.
+
+ -- Martin Pitt <mpitt@debian.org>  Thu, 10 Jul 2014 15:49:00 +0200
+
+gnome-common (3.12.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Mon, 24 Mar 2014 19:04:33 +0100
+
+gnome-common (3.10.0-1) unstable; urgency=low
+
+  * New upstream release.
+    - Use autoreconf instead of running the individual tools manually. This
+      also means gnome-autogen.sh no longer fails with newer automake
+      versions. Closes: #722231
+  * Drop debian/patches/02_autogen_required_versions.patch, it no longer
+    applies and the minimum required versions are available since a very long
+    time now.
+  * Wrap dependencies.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 24 Sep 2013 13:11:33 +0200
+
+gnome-common (3.7.4-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bump Standards-Version to 3.9.4.
+
+ -- Thomas Bechtold <thomasbechtold@jpberlin.de>  Sat, 01 Jun 2013 11:04:10 +0200
+
+gnome-common (3.6.0-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sun, 26 May 2013 00:33:25 +0200
+
+gnome-common (3.6.0-1) experimental; urgency=low
+
+  * New upstream release
+  * Refreshed debian/patches/02_autogen_required_versions.patch.
+  * debian/patches/03_bashisms.patch:
+  - removed; applied upstream
+
+ -- Gustavo Noronha Silva <kov@debian.org>  Mon, 10 Dec 2012 11:36:26 +0100
+
 gnome-common (3.4.0.1-1) unstable; urgency=low
 
   * New upstream release.
