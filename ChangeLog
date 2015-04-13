@@ -1,3 +1,180 @@
+commit 5d61b55e8bea32fe2b52e21682ee4b3719b290c5
+Author: David King <amigadave@amigadave.com>
+Date:   Mon Sep 22 12:32:59 2014 +0100
+
+    version 3.14.0
+
+ configure.ac | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 4153deb1b9b76601389657e64dcae6721002236f
+Author: Philip Withnall <philip.withnall@collabora.co.uk>
+Date:   Mon Sep 15 12:08:38 2014 +0100
+
+    macros2: Update links to macros in the autoconf-archive
+    
+    Now that the macros have been committed upstream, we can link to their
+    manual pages rather than the bug reports.
+
+ macros2/gnome-code-coverage.m4 | 2 +-
+ macros2/gnome-common.m4        | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit b23a0e022cde3e3aff15175bd5923eab17f48918
+Author: Bastien Nocera <hadess@hadess.net>
+Date:   Thu Sep 11 20:36:13 2014 +0200
+
+    macros2: Add support for APPSTREAM_XML macro
+    
+    And request that appstream-xml.m4 get installed if missing.
+    
+    https://bugzilla.gnome.org/show_bug.cgi?id=736497
+
+ macros2/gnome-autogen.sh | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+commit f07add268460e3e678124155a2ce4a623e7d14d6
+Author: Philip Withnall <philip.withnall@collabora.co.uk>
+Date:   Tue Aug 26 00:03:51 2014 +0100
+
+    macros2: Deprecate GNOME_CODE_COVERAGE
+    
+    The autoconf-archive AX_CODE_COVERAGE macro should be used instead.
+    
+    https://bugzilla.gnome.org/show_bug.cgi?id=729405
+
+ macros2/Makefile.am            |   1 +
+ macros2/ax_code_coverage.m4    | 180 +++++++++++++++++++++++++++++++++++++++++
+ macros2/gnome-code-coverage.m4 | 137 ++-----------------------------
+ 3 files changed, 188 insertions(+), 130 deletions(-)
+
+commit b62c76f204a8cae64dc2c3c33828d27c1a2581e5
+Author: Philip Withnall <philip.withnall@collabora.co.uk>
+Date:   Fri May 2 16:07:06 2014 +0200
+
+    macros2: Deprecate GNOME_MAINTAINER_MODE_DEFINES
+    
+    The modules which it deprecates are all ancient and unused. Many of the
+    modules which use GNOME_MAINTAINER_MODE_DEFINES don’t make use of the
+    DISABLE_DEPRECATED variable it generates anyway.
+    
+    If a module really wants maintainer mode, they should use
+    AM_MAINTAINER_MODE. Otherwise, they should just eliminate this call
+    entirely.
+    
+    https://bugzilla.gnome.org/show_bug.cgi?id=735417
+
+ macros2/gnome-common.m4 | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+commit f9073d5defa6f30bb8b364c3a56c53a60eb0b0dd
+Author: Philip Withnall <philip.withnall@collabora.co.uk>
+Date:   Fri May 2 16:04:07 2014 +0200
+
+    macros2: Deprecate GNOME_DEBUG_CHECK
+    
+    The autoconf-archive AX_DEBUG_CHECK macro should be used instead, or the
+    macro contents should just be substituted into configure.ac directly,
+    since it’s so simple.
+    
+    https://bugzilla.gnome.org/show_bug.cgi?id=729403
+
+ macros2/Makefile.am              |  13 ++++-
+ macros2/ax_check_enable_debug.m4 | 113 +++++++++++++++++++++++++++++++++++++++
+ macros2/gnome-common.m4          |  17 +++---
+ 3 files changed, 130 insertions(+), 13 deletions(-)
+
+commit efd34adf8b6d73f14c13fd87183983c576ea215c
+Author: Philip Withnall <philip.withnall@collabora.co.uk>
+Date:   Tue Aug 26 00:08:37 2014 +0100
+
+    build: Remove a non-existent file from EXTRA_DIST
+    
+    https://bugzilla.gnome.org/show_bug.cgi?id=735418
+
+ Makefile.am | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit cdb06bca3101ef09a207deb290bd607ec128e04b
+Author: Michael Catanzaro <mcatanzaro@gnome.org>
+Date:   Sun Aug 17 18:00:17 2014 -0500
+
+    compiler-flags: allow suppressing warnings
+    
+    Some projects want to see no warnings at all, for example, projects that
+    are written in Vala. But GNOME_COMPILE_WARNINGS([no]) is a no-op that
+    does nothing to turn off the default compiler warnings. Presumably if
+    you ask for no compiler warnings, you want no compiler warnings, so
+    suppress them in this case instead.
+    
+    https://bugzilla.gnome.org/show_bug.cgi?id=734973
+
+ macros2/gnome-compiler-flags.m4 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 13d01a8be18642956042f00321dece2cfe5493f1
+Author: Martin Pitt <martinpitt@gnome.org>
+Date:   Thu Jul 10 14:09:23 2014 +0200
+
+    code-coverage: Support lcov 1.11
+    
+    https://bugzilla.gnome.org/show_bug.cgi?id=732988
+
+ macros2/gnome-code-coverage.m4 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 5a58347c8f9b48915311f7c91b885722492d378a
+Author: Philip Withnall <philip.withnall@collabora.co.uk>
+Date:   Sat May 10 22:44:27 2014 +0100
+
+    macros2: Remove FORBIDDEN_M4MACROS infrastructure
+    
+    It was completely outdated and unused. The REQUIRED_M4MACROS
+    infrastructure is, however, still in use.
+    
+    https://bugzilla.gnome.org/show_bug.cgi?id=729932
+
+ macros2/gnome-autogen.sh | 28 ----------------------------
+ 1 file changed, 28 deletions(-)
+
+commit aa7f70bbce305cabeb1dcdbfc6cd7cd437f6a2c4
+Author: Philip Withnall <philip.withnall@collabora.co.uk>
+Date:   Fri May 2 16:10:33 2014 +0200
+
+    macros2: Remove outdated README file
+    
+    https://bugzilla.gnome.org/show_bug.cgi?id=729410
+
+ macros2/README.cvs-commits | 13 -------------
+ 1 file changed, 13 deletions(-)
+
+commit 0d59b7cb3b6e842ba87f4ebc1a56f654ad52301f
+Author: Philip Withnall <philip.withnall@collabora.co.uk>
+Date:   Fri May 2 15:41:29 2014 +0200
+
+    doc: Move doc/usage.txt to README and update
+    
+    We don’t like references to CVS any more. Update the guidelines to no
+    longer reference GNOME_COMMON_INIT.
+    
+    https://bugzilla.gnome.org/show_bug.cgi?id=729410
+
+ README        | 38 ++++++++++++++++++++++++++++++++++++++
+ doc/usage.txt | 40 ----------------------------------------
+ 2 files changed, 38 insertions(+), 40 deletions(-)
+
+commit f5bd3785edfbebef04089fc52f804249d88b89de
+Author: Antoine Jacoutot <ajacoutot@gnome.org>
+Date:   Tue Apr 15 10:27:49 2014 +0200
+
+    make program_VERSION a local variable
+    
+    Otherwise we may end up overriding what was manually set in the
+    environment.
+
+ macros2/gnome-autogen.sh | 1 +
+ 1 file changed, 1 insertion(+)
+
 commit d213283fcb5228d05eb2c796579f18240e8467e8
 Author: David King <amigadave@amigadave.com>
 Date:   Mon Mar 24 12:19:08 2014 +0000
